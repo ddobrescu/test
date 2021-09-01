@@ -1,0 +1,4 @@
+List of linux hosts checked:
+{% for i in groups['all'] %}
+{{ i }}:  {{ hostvars[i].ansible_distribution_version }}
+{% endfor %}
