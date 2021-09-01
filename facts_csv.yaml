@@ -11,6 +11,6 @@
   - name: Template a file
     template:
       src: report.j2
-      dest: /var/tmp/report.txt
+      dest: /tmp/eport.txt
     delegate_to: localhost
     run_once: true
