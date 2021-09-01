@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: debug
+    debug:
+      var: ansible_facts
+
+  - name: Template a file
+    template:
+      src: report.j2
+      dest: /var/tmp/report.txt
+    delegate_to: localhost
+    run_once: true
