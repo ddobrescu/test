@@ -5,6 +5,9 @@
     debug:
       var: ansible_facts
 
+  - debug:
+      msg: "{{ hostvars[inventory_hostname].ansible_distribution }}"
+
   - name: Template a file
     template:
       src: report.j2
