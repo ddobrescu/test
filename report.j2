@@ -1,4 +1,4 @@
 List of linux hosts checked:
-{% for i in groups['all'] %}
+{% for i in groups['tag_AWS_dev_lb'] %}
 {{ i }}:  {{ hostvars[i].ansible_distribution }}
 {% endfor %}
